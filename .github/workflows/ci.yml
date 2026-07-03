@@ -90,7 +90,7 @@ jobs:
         with:
           version: '6.4.2'
           arch: 'win64_msvc2019_64'
-          modules: 'qt5compat qtserialport qtsvg'
+          modules: 'qt5compat qtserialport'
           cache: true
 
       - name: Install NSIS
