@@ -116,6 +116,29 @@ jobs:
           if-no-files-found: error
           retention-days: 1
 
+  create_release:
+    name: Publish GitHub Release
+    needs: build_windows
+    if: needs.build_windows.result == 'success'
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/download-artifact@v4
+        with:
+          name: QPuterSetup-64bit.exe
+
+      - name: Create release
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          TAG="windows-build-${{ github.run_number }}"
+          gh release create "$TAG" \
+            --repo "${{ github.repository }}" \
+            --title "QPuter Windows build ${{ github.run_number }}" \
+            --notes "Automated Windows build from commit ${{ github.sha }}." \
+            QPuterSetup-64bit.exe QPuter-64bit.zip
+
   upload:
     name: Upload apps to storage
     needs: [build_windows, build_mac, build_linux]
