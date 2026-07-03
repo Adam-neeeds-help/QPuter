@@ -45,8 +45,12 @@
   !tempfile StdOut
   !echo "${StdOut}"
   !system 'cmd /c git describe --tags --abbrev=0 --exclude "*-rc*" > "${StdOut}" 2>nul || echo 0.0.0> "${StdOut}"'
-  !define /file VERSION "${StdOut}"
+  !define /file RAW_VERSION "${StdOut}"
   !delfile "${StdOut}"
+
+  ; VIProductVersion requires a plain X.X.X.X numeric version, so strip a
+  ; leading "v" from tags like "v1.1".
+  !searchreplace VERSION "${RAW_VERSION}" "v" ""
   !undef StdOut
 
   ; Default installation Dir. On Windows it will be C:\Program Files\QPuter
