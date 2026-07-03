@@ -18,9 +18,10 @@ QtObject {
     // Brightness factor: 1.0 at the default accent lightness (0.65), scales the whole theme.
     readonly property real lightFactor: accentLight / 0.65
 
-    // Hue rotation applied to baked purple SVG assets so they follow the accent too.
+    // Hue rotation applied to the baked device illustration so it follows the
+    // accent too. svgBase is the illustration's own baked line-art color.
     // (HueSaturation.hue: -1..1 maps to -360..360 degrees.)
-    readonly property color svgBase: "#a64dff"
+    readonly property color svgBase: "#e56b09"
     readonly property real svgHueShift: {
         var d = accentHue - svgBase.hslHue;
         if(d > 0.5) d -= 1.0;
