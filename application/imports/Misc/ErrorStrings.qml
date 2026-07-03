@@ -21,7 +21,7 @@ QtObject {
 <p>=========== HOW TO FIX ============</p>
 <p>1. Disconnect all other similar devices from this computer.</p>
 <p>2. Grant user permissions to access Serial devices.</p>
-<p>Run \"./qFlipper-x86_64-%1.AppImage rules install\" to do so automatically.</p>
+<p>Run \"./QPuter-x86_64-%1.AppImage rules install\" to do so automatically.</p>
 <p>3. If the problem persists, reboot Flipper into RECOVERY MODE and click REPAIR to perform a clean installation.</p>
 <p>-----------------------------------</p>
 <center><a href='https://docs.flipper.net/'>READ MORE</a></center>".arg(App.version)
@@ -39,7 +39,7 @@ QtObject {
 <p>=========== HOW TO FIX ============</p>
 <p>1. Ensure that Flipper is not connected via Bluetooth or Terminal session.</p>
 <p>2. Grant user permissions to access Serial devices.</p>
-<p>Run \"./qFlipper-x86_64-%1.AppImage rules install\" to do so automatically.</p>
+<p>Run \"./QPuter-x86_64-%1.AppImage rules install\" to do so automatically.</p>
 <p>3. Reconnect your Flipper.</p>
 <p>-----------------------------------</p>
 <center><a href='https://docs.flipper.net/'>READ MORE</a></center>".arg(App.version)
@@ -58,7 +58,7 @@ QtObject {
 <p>=========== HOW TO FIX ============</p>
 <p>1. Check that Flipper is in Update & Recovery mode.</p>
 <p>2. Reconnect your Flipper.</p>
-<p>3. Reinstall qFlipper to update DFU device driver.</p>
+<p>3. Reinstall QPuter to update DFU device driver.</p>
 <p>4. Reboot Flipper to Flipper OS and try again.</p>
 <p>-----------------------------------</p>
 <center><a href='https://docs.flipper.net/'>READ MORE</a></center>"
@@ -69,7 +69,7 @@ QtObject {
 <p>1. Check that Flipper is in Update & Recovery mode.</p>
 <p>2. Reconnect your Flipper.</p>
 <p>3. Grant user permissions to access DFU devices.</p>
-<p>Run \"./qFlipper-x86_64-%1.AppImage rules install\" to do so automatically.</p>
+<p>Run \"./QPuter-x86_64-%1.AppImage rules install\" to do so automatically.</p>
 <p>4. Reboot Flipper to Flipper OS and try again.</p>
 <p>-----------------------------------</p>
 <center><a href='https://docs.flipper.net/'>READ MORE</a></center>".arg(App.version)
@@ -87,8 +87,8 @@ QtObject {
 "<p>Canâ€™t save or read files to/from the local filesystem.</p>
 <p>=========== HOW TO FIX ============</p>
 <p>1. Make sure that you have free space on your local drive.</p>
-<p>2. Check that qFlipper has permissions to write on disk.</p>
-<p>3. When applicable, make sure to point qFlipper to the right files/directores.</p>
+<p>2. Check that QPuter has permissions to write on disk.</p>
+<p>3. When applicable, make sure to point QPuter to the right files/directores.</p>
 <p>-----------------------------------</p>
 <center><a href='https://docs.flipper.net/'>READ MORE</a></center>"
 
@@ -104,7 +104,7 @@ QtObject {
     readonly property string errorData:
 "<p>Necessary data seems to be damaged.</p>
 <p>=========== HOW TO FIX ============</p>
-<p>1. If applicable, make sure to point qFlipper to the right input file(s).</p>
+<p>1. If applicable, make sure to point QPuter to the right input file(s).</p>
 <p>2. Reboot your Flipper and reconnect via USB.</p>
 <p>3. Run the operation again.</p>
 <p>-----------------------------------</p>

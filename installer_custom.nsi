@@ -1,7 +1,7 @@
 Unicode true
-Name "qFlipper Custom"
-OutFile "build\qFlipperCustomSetup.exe"
-InstallDir "$PROGRAMFILES64\qFlipper Custom"
+Name "QPuter"
+OutFile "build\QPuterSetup.exe"
+InstallDir "$PROGRAMFILES64\QPuter"
 RequestExecutionLevel admin
 Icon "application\assets\icons\qFlipper-purple.ico"
 SetCompressor /solid lzma
@@ -13,18 +13,18 @@ UninstPage instfiles
 
 Section "Install"
   SetOutPath "$INSTDIR"
-  File /r "build\qFlipper\*"
+  File /r "build\QPuter\*"
   WriteUninstaller "$INSTDIR\uninstall.exe"
-  CreateShortCut "$DESKTOP\qFlipper Custom.lnk" "$INSTDIR\qFlipper.exe" "" "$INSTDIR\qFlipper.exe" 0
-  CreateShortCut "$SMPROGRAMS\qFlipper Custom.lnk" "$INSTDIR\qFlipper.exe" "" "$INSTDIR\qFlipper.exe" 0
-  WriteRegStr HKLM "Software\Microsoft\Windows\CurrentVersion\Uninstall\qFlipperCustom" "DisplayName" "qFlipper Custom"
-  WriteRegStr HKLM "Software\Microsoft\Windows\CurrentVersion\Uninstall\qFlipperCustom" "UninstallString" "$\"$INSTDIR\uninstall.exe$\""
-  WriteRegStr HKLM "Software\Microsoft\Windows\CurrentVersion\Uninstall\qFlipperCustom" "DisplayIcon" "$\"$INSTDIR\qFlipper.exe$\""
+  CreateShortCut "$DESKTOP\QPuter.lnk" "$INSTDIR\QPuter.exe" "" "$INSTDIR\QPuter.exe" 0
+  CreateShortCut "$SMPROGRAMS\QPuter.lnk" "$INSTDIR\QPuter.exe" "" "$INSTDIR\QPuter.exe" 0
+  WriteRegStr HKLM "Software\Microsoft\Windows\CurrentVersion\Uninstall\QPuter" "DisplayName" "QPuter"
+  WriteRegStr HKLM "Software\Microsoft\Windows\CurrentVersion\Uninstall\QPuter" "UninstallString" "$\"$INSTDIR\uninstall.exe$\""
+  WriteRegStr HKLM "Software\Microsoft\Windows\CurrentVersion\Uninstall\QPuter" "DisplayIcon" "$\"$INSTDIR\QPuter.exe$\""
 SectionEnd
 
 Section "Uninstall"
-  Delete "$DESKTOP\qFlipper Custom.lnk"
-  Delete "$SMPROGRAMS\qFlipper Custom.lnk"
+  Delete "$DESKTOP\QPuter.lnk"
+  Delete "$SMPROGRAMS\QPuter.lnk"
   RMDir /r "$INSTDIR"
-  DeleteRegKey HKLM "Software\Microsoft\Windows\CurrentVersion\Uninstall\qFlipperCustom"
+  DeleteRegKey HKLM "Software\Microsoft\Windows\CurrentVersion\Uninstall\QPuter"
 SectionEnd

@@ -8,7 +8,7 @@ import QFlipper 1.0
 import Primitives 1.0
 
 // Standalone, freely-movable theme window. Drag the title bar to move it anywhere
-// on the desktop (including outside the qFlipper window).
+// on the desktop (including outside the QPuter window).
 Window {
     id: control
 
