@@ -64,8 +64,13 @@
   ManifestDPIAware true
 
   ; Version Information displayer in Properties -> Details tab
-  ; Required for antivirus databases
-  VIProductVersion "${VERSION}.0" ; Only exact 4 numbers allowed x.x.x.x
+  ; Required for antivirus databases.
+  ; VIProductVersion requires an exact "X.X.X.X" numeric format and rejects
+  ; anything else, so it can't safely be derived from an arbitrary git tag
+  ; (v-prefixed, fewer than 3 components, etc). Hardcode it; the
+  ; human-readable ${VERSION} is still shown everywhere else (captions,
+  ; FileVersion, welcome/finish page text).
+  VIProductVersion "1.0.0.0"
   VIAddVersionKey "FileDescription" "QPuter Windows Installer"
   VIAddVersionKey "FileVersion" "${VERSION}.0"
   VIAddVersionKey "ProductName" "QPuter"
