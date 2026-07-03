@@ -12,8 +12,8 @@ Item {
 
     readonly property var deviceState: Backend.deviceState
 
-    width: 306
-    height: 280
+    width: 408
+    height: 270
 
     visible: opacity > 0
 
@@ -35,7 +35,7 @@ Item {
         id: flipperImage
         anchors.fill: parent
         source: "qrc:/assets/gfx/images/flipper.png"
-        sourceSize: Qt.size(1312, 1199) // full native resolution to stay sharp when upscaled
+        sourceSize: Qt.size(1260, 834) // full native resolution to stay sharp when upscaled
         fillMode: Image.PreserveAspectFit
         visible: false
     }
@@ -61,8 +61,8 @@ Item {
         id: blueLed
         visible: !!deviceState && deviceState.isRecoveryMode
 
-        x: 199
-        y: 162
+        x: 265
+        y: 156
 
         width: 9
         height: width
@@ -77,8 +77,8 @@ Item {
     Image {
         id: defaultScreen
 
-        x: 85
-        y: 52
+        x: 112
+        y: 23
 
         visible: (deviceState && deviceState.isRecoveryMode) ||
                  Backend.backendState === ApplicationBackend.Finished
@@ -86,7 +86,7 @@ Item {
         source: deviceState && deviceState.isRecoveryMode ? "qrc:/assets/gfx/images/recovery.svg" :
                 Backend.backendState === ApplicationBackend.Finished ? "qrc:/assets/gfx/images/success.svg" :
                                                                        ""
-        sourceSize: Qt.size(82, 55)
+        sourceSize: Qt.size(115, 68)
     }
 
     ScreenCanvas {
@@ -105,11 +105,11 @@ Item {
     ExpandWidget {
         id: expandWidget
 
-        x: 85
-        y: 52
+        x: 112
+        y: 23
 
-        width: 82
-        height: 55
+        width: 115
+        height: 68
 
         visible: screenCanvas.visible
         opacity: clickArea.hovered ? clickArea.down ? 0.9 : 1 : 0
