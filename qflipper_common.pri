@@ -27,7 +27,7 @@ unix:!macx {
     error("Unsupported OS or compiler")
 }
 
-GIT_VERSION = $$system("git describe --tags --abbrev=0","lines", HAS_VERSION)
+GIT_VERSION = $$system("git describe --tags --abbrev=0 --match v[0-9]*","lines", HAS_VERSION)
 !equals(HAS_VERSION, 0) {
     GIT_VERSION = unknown
 }
